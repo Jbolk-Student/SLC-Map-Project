@@ -104,8 +104,8 @@ h1 {
   width: 100%;
   min-height: 620px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
   background:
     radial-gradient(
       circle at top left,
@@ -121,7 +121,9 @@ h1 {
 #unity-canvas {
   width: 100%;
   height: 100%;
+  min-height: 0;
   display: block;
+  flex: 1 1 auto;
   background: #070b14;
 }
 
@@ -149,17 +151,18 @@ h1 {
   width: 76px;
   height: 64px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.08);
+  background: url("unity-logo-dark.png") no-repeat center/contain;
   border-radius: 16px;
 }
 
 #unity-progress-bar-empty {
   position: relative;
   width: 100%;
-  height: 14px;
+  height: 18px;
   margin: 22px auto 0;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: url("progress-bar-empty-dark.png") no-repeat center/contain;
+  background-size: 100% 100%;
   overflow: hidden;
 }
 
@@ -167,15 +170,13 @@ h1 {
   width: 0%;
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #38bdf8, #60a5fa);
+  background: url("progress-bar-full-dark.png") no-repeat center/contain;
+  background-size: 100% 100%;
   transition: width 0.28s ease;
 }
 
 #unity-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -192,7 +193,8 @@ h1 {
 #unity-logo-title-footer {
   flex: 1;
   min-height: 38px;
-  background: rgba(255, 255, 255, 0.05);
+  background: url("unity-logo-title-footer.png") no-repeat center/contain;
+  background-size: auto 78%;
   border-radius: 16px;
 }
 
@@ -209,7 +211,8 @@ h1 {
   height: 44px;
   min-width: 44px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  background: url("fullscreen-button.png") no-repeat center/contain;
+  background-color: rgba(37, 99, 235, 0.18);
   box-shadow: 0 16px 32px rgba(14, 165, 233, 0.25);
 }
 
