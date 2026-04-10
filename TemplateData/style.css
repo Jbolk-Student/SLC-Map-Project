@@ -269,3 +269,69 @@ h1 {
     min-height: 360px;
   }
 }
+
+.page-link,
+.back-link {
+  display: inline-flex;
+  margin-top: 24px;
+  color: #7dd3fc;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.page-link:hover,
+.back-link:hover {
+  color: #38bdf8;
+}
+
+.creator-panel {
+  display: grid;
+  gap: 24px;
+  padding: 40px 36px;
+  background: rgba(5, 13, 29, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+}
+
+.creator-list {
+  background: rgba(3, 10, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.creator-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.creator-list li {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.creator-list li strong {
+  color: #eef2ff;
+}
+
+.creator-list a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.creator-list a:hover {
+  color: #38bdf8;
+}
+
+@media (max-width: 720px) {
+  .creator-list ul {
+    grid-template-columns: 1fr;
+  }
+}
