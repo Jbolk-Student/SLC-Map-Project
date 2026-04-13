@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<!-- Jeffrey Bolk -->
-<!-- 2026-04-09 -->
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>School-Map-Project</title>
+  <title>Unity Web Player | School-Map-Project</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
 </head>
 
 <body>
-  <div id="page-shell">
-    <section class="player-panel">
-      <header class="player-header">
-        <span class="player-badge">Map Viewer</span>
-        <h1>Interactive SLC Map</h1>
-        <p>Explore St. Lawrence Campus. Use fullscreen to dive into the scene.</p>
-        <a class="page-link" href="creators.html">Meet the creators</a>
-      </header>
-      <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-        <div id="unity-loading-bar">
-          <div id="unity-logo"></div>
-          <div id="unity-progress-bar-empty">
-            <div id="unity-progress-bar-full"></div>
-          </div>
-        </div>
-        <div id="unity-warning"> </div>
-        <div id="unity-footer">
-          <div id="unity-logo-title-footer"></div>
-          <div id="unity-fullscreen-button"></div>
-          <div id="unity-build-title">School-Map-Project</div>
-        </div>
+  <div id="unity-container" class="unity-desktop">
+    <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+    <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
       </div>
-    </section>
+    </div>
+    <div id="unity-warning"> </div>
+    <div id="unity-footer">
+      <div id="unity-logo-title-footer"></div>
+      <div id="unity-fullscreen-button"></div>
+      <div id="unity-build-title">School-Map-Project</div>
+    </div>
   </div>
   <script>
     var canvas = document.querySelector("#unity-canvas");
@@ -68,12 +54,12 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/SLC-Map_Web-Build.loader.js";
+    var loaderUrl = buildUrl + "/SLC-Map-Project.loader.js";
     var config = {
       arguments: [],
-      dataUrl: buildUrl + "/SLC-Map_Web-Build.data",
-      frameworkUrl: buildUrl + "/SLC-Map_Web-Build.framework.js",
-      codeUrl: buildUrl + "/SLC-Map_Web-Build.wasm",
+      dataUrl: buildUrl + "/SLC-Map-Project.data",
+      frameworkUrl: buildUrl + "/SLC-Map-Project.framework.js",
+      codeUrl: buildUrl + "/SLC-Map-Project.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "School-Map-Project",
